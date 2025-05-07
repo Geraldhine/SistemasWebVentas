@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iniciar sesión - Amazon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylelog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Reem+Kufi+Fun&family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mid-div">
+
+        <div id="m1">
+            <div id="m2">
+                <div>
+                    <div>
+                        <img src="img/logo/logo_jya_black.png" alt="Logo">
+                    </div>
+                    <div>
+                        <h1 id="si">Iniciar sesión</h1>
+                    </div>
+                    <div class="edd">
+                        <form action="login_process.php" method="POST">
+                            <div class="ema">
+                                <label for="email">E-mail</label><br>
+                                <input type="email" id="email" name="email" required> <br>
+                            </div>
+                            <div class="ema">
+                                <label for="password">Contraseña</label><br>
+                                <input type="password" id="password" name="password" required><br>
+                            </div>
+                            <button id="but" type="submit">Continuar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help-section">
+            <div class="line"></div>
+            <div class="content">¿Eres nuevo?</div>
+            <div class="line"></div>
+        </div>
+        <div class="but1">
+            <button onclick="window.location.href='register.php'">Crea tu cuenta de JyA</button>
+        </div>
+    </div>
+    <div class="cont">
+        <hr>
+        <ul>
+            <li><a href="#">Condiciones de uso</a></li>
+            <li><a href="#">Aviso de privacidad</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        <p>© 2023-2023, JyA.com, Inc. or its affiliates</p>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>

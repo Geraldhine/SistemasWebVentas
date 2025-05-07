@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resumen del Carrito</h1>
+    <?php
+    if (isset($_COOKIE['cartContents'])) {
+        $cartContents = json_decode(urldecode($_COOKIE['cartContents']), true);
+    } else {
+        $cartContents = [];
+    }
+
+    if (!empty($cartContents)) {
+        echo '<table>';
+        echo '<thead>';
+        echo '<tr>';
+        echo '<th>ID del Producto</th>';
+        echo '<th>Nombre del Producto</th>';
+        echo '<th>Precio</th>';
+        echo '<th>Cantidad</th>';
+        echo '<th>Total</th>';
+        echo '</tr>';
+        echo '</thead>';
+        echo '<tbody>';
+        foreach ($cartContents as $item) {
+            $totalPrice = $item['price'] * $item['quantity'];
+            echo '<tr>';
+            echo '<td>' . htmlspecialchars($item['id']) . '</td>';
+            echo '<td>' . htmlspecialchars($item['name']) . '</td>';
+            echo '<td>S/. ' . number_format(htmlspecialchars($item['price']), 2) . '</td>';
+            echo '<td>' . htmlspecialchars($item['quantity']) . '</td>';
+            echo '<td>S/. ' . number_format($totalPrice, 2) . '</td>';
+            echo '</tr>';
+        }
+        echo '</tbody>';
+        echo '</table>';
+    } else {
+        echo '<p>No hay productos en el carrito.</p>';
+    }
+    ?>
+</body>
+</html>

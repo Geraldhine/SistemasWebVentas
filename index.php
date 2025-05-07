@@ -1,0 +1,324 @@
+<?php
+include 'conexion.php';
+// "SELECT * FROM categorias INNER JOIN productos ON productos.IdCategoria = categorias.idCategoria";
+$sqlDamas =  "SELECT * FROM categorias INNER JOIN productos ON productos.IdCategoria = categorias.idCategoria WHERE categorias.idCategoria = 2 LIMIT 4";
+$resultDamas = $conn->query($sqlDamas);
+
+$sqlCaballeros =  "SELECT * FROM categorias INNER JOIN productos ON productos.IdCategoria = categorias.idCategoria WHERE categorias.idCategoria = 1 LIMIT 4";
+$resultCaballeros = $conn->query($sqlCaballeros);
+
+$sqlCalzados =  "SELECT * FROM categorias INNER JOIN productos ON productos.IdCategoria = categorias.idCategoria WHERE categorias.idCategoria = 3 LIMIT 4";
+$resultCalzados = $conn->query($sqlCalzados);
+
+$sqlAccesorios =  "SELECT * FROM categorias INNER JOIN productos ON productos.IdCategoria = categorias.idCategoria WHERE categorias.idCategoria = 4 LIMIT 4";
+$resultAccesorios = $conn->query($sqlAccesorios);
+
+$query = isset($_GET['query']) ? $_GET['query'] : '';
+
+
+$sqlusuario = "SELECT nombre_usuario FROM usuarios";
+$resultusuario = $conn->query($sqlusuario);
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Ropas | J&A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-******************" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header1.css">
+    <link rel="stylesheet" href="footer.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <section class="header_social-medias">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </section>
+        <section class="navegacion">
+            <div class="content_nav">
+                <div class="content_logo">
+
+                    <a href="index.php">
+                        <img src="img/logo/logo_jya.png" alt="Logo">
+                    </a>
+                    <!-- <section class="eslogan">
+                        <h1>Venta de ropa, calzados y accesorios</h1>
+                    </section> -->
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.php">Inicio</a></li>
+                        <li>
+                            <a href="categorias.php">Categorias</a>
+                            <ul class="submenu">
+                                <li><a href="ropa_caballeros.php">Caballeros</a></li>
+                                <li><a href="ropa_mujeres.php">Damas</a></li>
+                                <li><a href="calzados.php">Calzados</a></li>
+                                <li><a href="accesorios.php">Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contactanos.php">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="content_item">
+                    <form action="search.php" method="GET">
+                        <input type="text" name="query" placeholder="Buscar productos, marcas y más..." value="<?php echo htmlspecialchars($query); ?>">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <a href="login.php"><img src="img/iconos/usuario (2).png" alt=""><span>Usuario</span></a>
+                    <a href="#" id="cart-button"><img src="img/iconos/carro_compras.png" alt="">Carrito (<span id="cart-count">0</span>)</a>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/carro1.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item active">
+                    <img src="img/carro2.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item active">
+                    <img src="img/carro3.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item active">
+                    <img src="img/carro4.jpg" class="d-block w-100" alt="..." />
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <section class="content">
+            <!-- seccion damas -->
+            <section class="main_seccion_damas">
+                <div class="contenido-seccion">
+                    <div class="col">
+                        <div class="fila">
+                            <br />
+                            <div class="line"></div>
+                        </div>
+                        <div class="fila">
+                            <span>Mujeres</span>
+                        </div>
+                        <div class="fila">
+                            <br />
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenido-seccion">
+                    <?php if ($resultDamas->num_rows > 0) : ?>
+                        <?php while ($row = $resultDamas->fetch_assoc()) : ?>
+                            <div class="tarjeta" data-id='<?= $row['idProductos'] ?>' data-name="<?= $row['nombreProducto'] ?>" data-price="<?= $row['precioProducto'] ?>">
+                                <img src='data:image/jpeg;base64,<?= base64_encode($row['imagenProducto']) ?>' alt='Foto de prodcuto '>
+                                <div class="informacion_producto">
+                                    <h3 class="nombre_producto"><?= $row['nombreProducto'] ?></h3>
+                                    <p class="producto_detalle"><?= $row['detalleProducto'] ?></p>
+                                    <p class=""><?= $row['nombreCategoria'] ?></p>
+                                    <div class="footer_tarjeta">
+                                        <span class="producto_precio"> S/. <?= $row['precioProducto'] ?></span>
+                                        <button class="add-to-cart"><img src="img/iconos/carro_compras.png" alt=""> Añadir al Carrito </button>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p>No hay resultados</p>
+                    <?php endif; ?>
+                </div>
+            </section>
+
+            <!-- seccion caballeros -->
+            <section class="main_seccion_caballeros">
+                <div></div>
+                <div class="contenido-seccion">
+                    <div class="col">
+                        <div class="fila">
+                            <br />
+                            <div class="line"></div>
+                        </div>
+                        <div class="fila">
+                            <span>Caballeros</span>
+                        </div>
+                        <div class="fila">
+                            <br />
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenido-seccion">
+                    <?php if ($resultCaballeros->num_rows > 0) : ?>
+                        <?php while ($row = $resultCaballeros->fetch_assoc()) : ?>
+                            <div class="tarjeta" data-id='<?= $row['idProductos'] ?>' data-name="<?= $row['nombreProducto'] ?>" data-price="<?= $row['precioProducto'] ?>">
+                                <img src='data:image/jpeg;base64,<?= base64_encode($row['imagenProducto']) ?>' alt='Foto de prodcuto '>
+                                <div class="informacion_producto">
+                                    <h3 class="nombre_producto"><?= $row['nombreProducto'] ?></h3>
+                                    <p class="producto_detalle"><?= $row['detalleProducto'] ?></p>
+                                    <p class=""><?= $row['nombreCategoria'] ?></p>
+                                    <div class="footer_tarjeta">
+                                        <span class="producto_precio"> S/. <?= $row['precioProducto'] ?></span>
+                                        <button class="add-to-cart"><img src="img/iconos/carro_compras.png" alt=""> Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p>No hay resultados</p>
+                    <?php endif; ?>
+                </div>
+            </section>
+            <section class="main_seccion_calzados">
+                <div class="contenido-seccion">
+                    <div class="col">
+                        <div class="fila">
+                            <br>
+                            <div class="line"></div>
+                        </div>
+                        <div class="fila">
+                            <span>Calzados</span>
+                        </div>
+                        <div class="fila">
+                            <br>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenido-seccion">
+                    <?php if ($resultCalzados->num_rows > 0) : ?>
+                        <?php while ($row = $resultCalzados->fetch_assoc()) : ?>
+                            <div class="tarjeta" data-id='<?= $row['idProductos'] ?>' data-name="<?= $row['nombreProducto'] ?>" data-price="<?= $row['precioProducto'] ?>">
+                                <img src='data:image/jpeg;base64,<?= base64_encode($row['imagenProducto']) ?>' alt='Foto de prodcuto '>
+                                <div class="informacion_producto">
+                                    <h3 class="nombre_producto"><?= $row['nombreProducto'] ?></h3>
+                                    <p class="producto_detalle"><?= $row['detalleProducto'] ?></p>
+                                    <p class=""><?= $row['nombreCategoria'] ?></p>
+                                    <div class="footer_tarjeta">
+                                        <span class="producto_precio"> S/. <?= $row['precioProducto'] ?></span>
+                                        <button class="add-to-cart"><img src="img/iconos/carro_compras.png" alt=""> Añadir al Carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p>No hay resultados</p>
+                    <?php endif; ?>
+                </div>
+            </section>
+
+            <section class="main_seccion_accesorios">
+                <div class="contenido-seccion">
+                    <div class="col">
+                        <div class="fila">
+                            <br>
+                            <div class="line"></div>
+                        </div>
+                        <div class="fila">
+                            <span>Accesorios</span>
+                        </div>
+                        <div class="fila">
+                            <br>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="products">
+                    <div class="contenido-seccion">
+                        <?php if ($resultAccesorios->num_rows > 0) : ?>
+                            <?php while ($row = $resultAccesorios->fetch_assoc()) : ?>
+                                <div class="tarjeta" data-id='<?= $row['idProductos'] ?>' data-name="<?= $row['nombreProducto'] ?>" data-price="<?= $row['precioProducto'] ?>">
+                                    <img src='data:image/jpeg;base64,<?= base64_encode($row['imagenProducto']) ?>' alt='Foto de prodcuto '>
+                                    <div class="informacion_producto">
+                                        <h3 class="nombre_producto"><?= $row['nombreProducto'] ?></h3>
+                                        <p class="producto_detalle"><?= $row['detalleProducto'] ?></p>
+                                        <p class=""><?= $row['nombreCategoria'] ?></p>
+                                        <div class="footer_tarjeta">
+                                            <span class="producto_precio"> S/. <?= $row['precioProducto'] ?></span>
+                                            <button class="add-to-cart"><img src="img/iconos/carro_compras.png" alt=""> Añadir al Carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <p>No hay resultados</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </section>
+
+            <div id="cart-modal" class="cart-modal">
+                <div class="cart-content">
+                    <span class="close">&times;</span>
+                    <h2>Carrito de Compras</h2>
+                    <div id="cart-items"></div>
+                    <div class="cart-total">
+                        <span>Total: S/. <span class="total-price">0.00</span></span>
+                        <button id="checkout-button">Pagar</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <?php $conn->close(); ?>
+        <script src="carrito.js"></script>
+        <script src="chatbot.js"></script>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="contactanos.php">Contactos</a></li>
+                <li><a href>Reclamos</a></li>
+                <li><a href>Metodos de pago</a></li>
+                <li><a href="nosotros.php">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="footer_bottom">
+            <p>&copy; 2024 J&A. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

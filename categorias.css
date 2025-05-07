@@ -1,0 +1,142 @@
+
+main {
+    background-color: #f8f8f8;
+    flex-grow: 1;
+    padding: 2em;
+    padding-top: 100px;
+}
+
+/* Categories List */
+
+
+.categories_list {
+    width: 20%;
+    background-color: #8f9388;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.categories_list h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.categories_list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories_list ul li {
+    margin-bottom: 15px;
+}
+
+.categories_list ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.categories_list ul li a:hover {
+    color: #fff;
+    background-color: #e1720b;
+}
+
+
+.shoe-store{
+    display: flex;
+}
+
+footer nav {
+    background-color: rgb(141, 139, 136);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.productos{
+    background-color: #ffffff;
+    width: 100%;
+}
+.productos .contenido-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.productos .contenido-seccion .tarjeta{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.productos .contenido-seccion .tarjeta img {
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ffd89e;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.productos .contenido-seccion .tarjeta .nombre_producto{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #01294b;
+}
+.productos .contenido-seccion .tarjeta .informacion_producto{
+    padding: 1em;
+}
+.productos .contenido-seccion .tarjeta .producto_detalle{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.productos .contenido-seccion .tarjeta .producto_precio{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #01294b;
+    padding-right: 50px;
+}
+.productos .contenido-seccion .tarjeta .footer_tarjeta{
+    display: flex;
+    justify-content: space-around;
+}
+
+.productos .contenido-seccion .tarjeta .footer_tarjeta button {
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: bold;
+    display: flex;
+}
+.productos .contenido-seccion .tarjeta .footer_tarjeta button img {
+    width: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+}

@@ -1,0 +1,152 @@
+/* Estilos generales */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+#mid-div {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px; /* Añadido para el espacio entre el cuadro y el pie de página */
+}
+
+#mid-div img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+#si {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.edd {
+    margin-top: 20px;
+}
+
+.ema {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ema label {
+    font-weight: bold;
+    color: #006545;
+}
+
+.ema input[type="text"],
+.ema input[type="email"],
+.ema input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.ema input[type="text"]:focus,
+.ema input[type="email"]:focus,
+.ema input[type="password"]:focus {
+    border-color: #007185;
+    outline: none;
+}
+
+#but {
+    width: 100%;
+    padding: 10px;
+    background-color: #00815a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#but:hover {
+    background-color: #00402c;
+}
+
+.help-section {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.help-section .line {
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.help-section .content {
+    margin: 0 10px;
+}
+
+.but1 button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #a8acaf;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.but1 button:hover {
+    background-color: #f0f0f0;
+}
+
+.cont {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.cont hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.cont ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cont ul li {
+    display: inline;
+}
+
+.cont ul li a {
+    text-decoration: none;
+    color: #007185;
+    font-size: 14px;
+}
+
+.cont ul li a:hover {
+    text-decoration: underline;
+}
+
+.cont p {
+    font-size: 12px;
+    color: #666;
+    margin: 10px 0;
+}

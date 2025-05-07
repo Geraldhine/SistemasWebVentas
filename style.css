@@ -1,0 +1,539 @@
+main {
+    background-color: #f8f8f8;
+    flex-grow: 1;
+    padding: 2em;
+    padding-top: 100px;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+    background-color: #f8f8f8;
+    border-radius: 10px 10px 0 0;
+}
+
+.main_portada {
+    text-align: center;
+}
+
+.eslogan h1 {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+}
+
+.carousel-inner img {
+    height: 600px;
+    /* Ajusta esta altura según tus necesidades */
+    /* padding: 0 60px 0 60px; */
+
+    
+}
+/* damas */
+.main_seccion_damas {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.main_seccion_damas .contenido-seccion {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.main_seccion_damas .contenido-seccion .col {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    padding: 10px;
+    height: auto;
+}
+
+.main_seccion_damas .contenido-seccion .col .fila {
+    text-align: center;
+}
+
+.main_seccion_damas .contenido-seccion .col .fila span {
+    color: #49014b;
+    font-optical-sizing: auto;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main_seccion_damas .contenido-seccion .col .fila .line {
+    height: 2px;
+    background-color: #49014b;
+    border-radius: 10px;
+
+}
+
+.main_seccion_damas .catalogo_damas {
+    margin: 0 auto;
+    background-color: rgb(201, 13, 145);
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 0px 10px 0;
+}
+
+.main_seccion_damas .catalogo_damas a {
+    color: rgb(9, 9, 9);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+/*  tarjeta producto damas */
+.main_seccion_damas .contenido-seccion .tarjeta{
+    
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    width: 350px;
+}
+
+.main_seccion_damas .contenido-seccion .tarjeta img {
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ffd89e;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.main_seccion_damas .contenido-seccion .tarjeta .nombre_producto{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #49014b;
+}
+.main_seccion_damas .contenido-seccion .tarjeta .informacion_producto{
+    padding: 1em;
+}
+.main_seccion_damas .contenido-seccion .tarjeta .producto_detalle{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.main_seccion_damas .contenido-seccion .tarjeta .producto_precio{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #49014b;
+    padding-right: 50px;
+}
+.main_seccion_damas .contenido-seccion .tarjeta .footer_tarjeta{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_seccion_damas .contenido-seccion .tarjeta .footer_tarjeta button {
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #49014b;
+    font-weight: bold;
+    display: flex;
+}
+.main_seccion_damas .contenido-seccion .tarjeta .footer_tarjeta button img {
+    width: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+}
+/* final de tarjeta producto damas */
+
+/* caballeros */
+.main_seccion_caballeros {
+
+    
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.main_seccion_caballeros .contenido-seccion {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.main_seccion_caballeros .contenido-seccion .col {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    padding: 10px;
+    height: auto;
+}
+
+.main_seccion_caballeros .contenido-seccion .col .fila {
+    text-align: center;
+}
+
+.main_seccion_caballeros .contenido-seccion .col .fila span {
+    color: rgb(2, 0, 90);
+    font-optical-sizing: auto;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main_seccion_caballeros .contenido-seccion .col .fila .line {
+    height: 2px;
+    background-color: rgb(2, 0, 90);
+    border-radius: 10px;
+}
+
+/* tajeta de producto caballeros */
+
+.main_seccion_caballeros .contenido-seccion .tarjeta{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    width: 350px;
+}
+
+.main_seccion_caballeros .contenido-seccion .tarjeta img {
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ffd89e;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.main_seccion_caballeros .contenido-seccion .tarjeta .nombre_producto{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #01294b;
+}
+.main_seccion_caballeros .contenido-seccion .tarjeta .informacion_producto{
+    padding: 1em;
+}
+.main_seccion_caballeros .contenido-seccion .tarjeta .producto_detalle{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.main_seccion_caballeros .contenido-seccion .tarjeta .producto_precio{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #01294b;
+    padding-right: 50px;
+}
+.main_seccion_caballeros .contenido-seccion .tarjeta .footer_tarjeta{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_seccion_caballeros .contenido-seccion .tarjeta .footer_tarjeta button {
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #01294b;
+    font-weight: bold;
+    display: flex;
+}
+.main_seccion_caballeros .contenido-seccion .tarjeta .footer_tarjeta button img {
+    width: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+}
+/* final tarjeta productos caballeros */
+
+
+
+/* inicio de calzados */
+
+.main_seccion_calzados {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(145, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.main_seccion_calzados .contenido-seccion {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_seccion_calzados .contenido-seccion .col {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    padding: 10px;
+    height: auto;
+}
+
+.main_seccion_calzados .contenido-seccion .col .fila {
+    text-align: center;
+}
+
+.main_seccion_calzados .contenido-seccion .col .fila span {
+    color: rgb(0, 0, 0);
+    font-optical-sizing: auto;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main_seccion_calzados .contenido-seccion .col .fila .line {
+    height: 2px;
+    background-color: rgb(2, 0, 90);
+    border-radius: 10px;
+}
+
+/* tajeta de producto calzado */
+
+.main_seccion_calzados .contenido-seccion .tarjeta{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    width: 350px;
+}
+
+.main_seccion_calzados .contenido-seccion .tarjeta img {
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ffd89e;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.main_seccion_calzados .contenido-seccion .tarjeta .nombre_producto{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #01294b;
+}
+.main_seccion_calzados .contenido-seccion .tarjeta .informacion_producto{
+    padding: 1em;
+}
+.main_seccion_calzados .contenido-seccion .tarjeta .producto_detalle{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.main_seccion_calzados .contenido-seccion .tarjeta .producto_precio{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #01294b;
+    padding-right: 50px;
+}
+.main_seccion_calzados .contenido-seccion .tarjeta .footer_tarjeta{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_seccion_calzados .contenido-seccion .tarjeta .footer_tarjeta button {
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #014b28;
+    font-weight: bold;
+    display: flex;
+}
+.main_seccion_calzados .contenido-seccion .tarjeta .footer_tarjeta button img {
+    width: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+}
+/* final tarjeta productos calzados */
+
+/* inicio de accesorios */
+
+.main_seccion_accesorios {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(145, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.main_seccion_accesorios .contenido-seccion {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_seccion_accesorios .contenido-seccion .col {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    padding: 10px;
+    height: auto;
+}
+
+.main_seccion_accesorios .contenido-seccion .col .fila {
+    text-align: center;
+}
+
+.main_seccion_accesorios .contenido-seccion .col .fila span {
+    color: rgb(0, 0, 0);
+    font-optical-sizing: auto;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main_seccion_accesorios .contenido-seccion .col .fila .line {
+    height: 3px;
+    background-color: rgb(5, 73, 64);
+    border-radius: 10px;
+}
+
+/* tajeta de producto accesorios */
+
+
+
+.main_seccion_accesorios .contenido-seccion .tarjeta{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    width: 350px;
+}
+
+.main_seccion_accesorios .contenido-seccion .tarjeta img {
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ffd89e;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.main_seccion_accesorios .contenido-seccion .tarjeta .nombre_producto{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #01294b;
+}
+.main_seccion_accesorios .contenido-seccion .tarjeta .informacion_producto{
+    padding: 1em;
+}
+.main_seccion_accesorios .contenido-seccion .tarjeta .producto_detalle{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.main_seccion_accesorios .contenido-seccion .tarjeta .producto_precio{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #01294b;
+    padding-right: 50px;
+}
+.main_seccion_accesorios .contenido-seccion .tarjeta .footer_tarjeta{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_seccion_accesorios .contenido-seccion .tarjeta .footer_tarjeta button {
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #4b4001;
+    font-weight: bold;
+    display: flex;
+}
+.main_seccion_accesorios .contenido-seccion .tarjeta .footer_tarjeta button img {
+    width: 20px;
+    filter: invert(100%);
+    margin-right: 10px;
+}
+/* final tarjeta productos calzados */
+
+
+/* Estilos para el modal del carrito */
+#cart-modal {
+    position: fixed;
+    top: 0;
+    right: 0; /* Cambiado a right */
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Cambiado para sombra desde la izquierda */
+    transform: translateX(100%); /* Cambiado a 100% */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  #cart-modal.visible {
+    transform: translateX(0);
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .cart-modal .close {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Cambiado a left */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para los artículos en el carrito */
+  .cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-item .item-name,
+  .cart-item .item-price {
+    display: block;
+  }
+  
+  .cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item .quantity-controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 5px;
+  }
+  
+  /* Estilos para el precio total y botón de checkout */
+  .total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #checkout-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Ocultar el modal por defecto */
+  #cart-modal {
+    display: none;
+  }
